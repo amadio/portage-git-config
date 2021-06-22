@@ -5,7 +5,7 @@ repository_path="${3}"
 
 [[ ${repository_name} == "gentoo" ]] || exit 0
 
-source /lib/gentoo/functions.sh
+source $(portageq envvar EPREFIX)/lib/gentoo/functions.sh
 
 ebegin "Updating projects.xml"
 wget -q -P "${repository_path}"/metadata/ -N https://api.gentoo.org/metastructure/projects.xml

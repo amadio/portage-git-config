@@ -5,7 +5,7 @@ repository_path="${3}"
 
 [[ ${repository_name} == "gentoo" ]] || exit 0
 
-source /lib/gentoo/functions.sh
+source $(portageq envvar EPREFIX)/lib/gentoo/functions.sh
 
 # Number of jobs for egencache, default is number or processors.
 parallel_jobs="$(nproc)"
